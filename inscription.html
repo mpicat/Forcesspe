@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+    <html lang=fr>
+        <head>
+            <title>Tests Entraînement Forces Spéciales</title>
+            <link rel="stylesheet" href="FS.css">
+            <link rel="icon" type="icon/x-icon" href="Images/icon.png">
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script src="https://kit.fontawesome.com/fdfdfc919c.js" crossorigin="anonymous"></script>
+        </head>
+        <body>
+            <nav>
+                <img class="icon1" src="Images/icon.png" alt="icon1" style="height: 50px; width: 50px;">
+                <a href="FS.html">Accueil</a>
+                <a href="tests.html">Tests</a>
+                <a href="#">Entrainements</a>
+                <a href="inscription.html">Inscription</a>
+            </nav>
+            <!-- autocomplete permet de se souvenir de ce qui a déjà été écrit ici-->
+            <form action="/action_page.php" target="_blank" method="post" autocomplete="on">
+                <fieldset>
+                        <legend>Formulaire</legend>
+                            <label for="log">Utilisateur* :</label><br>
+                            <!-- required : obligatoire pour submit -->
+                            <input type="text" id="log" name="log" required autofocus><br><br>
+                            <label for="pw">Mot de passe (8 caractères) :</label><br>
+                            <input type="password" id="pw" name="pw" maxlength="8"><br><br>
+                            <label for="bd">Date de naissance :</label><br>
+                            <input type="date" id="bd" name="bd"><br><br>
+                            <label for="mail">Mail :</label><br>
+                            <input type="email" id="mail" name="mail" size="25" placeholder="mail@gmail.com"><br><br>
+                            <label for="cm">Certificat médical :</label><br>
+                            <input type="file" id="cm" name="cm"><br><br>
+
+                        <h4>Quel est votre niveau de pratique sportive actuel ?</h4>
+                            <input type="radio" id="jamais" name="PS">
+                            <label for="jamais">Jamais</label><br>
+                            <input type="radio" id="peu" name="PS">
+                            <label for="peu">1 à 2h par semaine</label><br>
+                            <input type="radio" id="moyen" name="PS">
+                            <label for="moyen">2 à 4h par semaine</label><br>
+                            <input type="radio" id="eleve" name="PS">
+                            <label for="eleve">Plus de 4h par semaine</label><br><br>
+                        <h4>Avez-vous plutôt des facilités avec :</h4>
+                            <input type="checkbox" id="top" name="fac">
+                            <label for="top">Les exercices haut du corps</label><br>
+                            <input type="checkbox" id="bot" name="fac">
+                            <label for="bot">Les exercices bas du corps</label><br>
+                            <input type="checkbox" id="mid" name="fac">
+                            <label for="mid">Les exercices d'abdominaux</label><br>
+                            <input type="checkbox" id="end" name="fac">
+                            <label for="end">Les exercices d'endurance</label><br><br>
+                        <h4>Quels sont vos motivations pour démarrer ce programme ?</h4>
+                            <textarea name="message" rows="10" cols="30"></textarea><br><br>
+                        <h4>Quel jour désirez-vous commencer le programme ?</h4>
+                            <label for="day">Choisissez un jour :</label>
+                            <!-- size permet de voir cb d'options sont visibles -->
+                            <!-- rajouter l'option multiple permet de faire plusieurs choix en maintenant ctrl -->
+                            <select id="day" name="day" size="1">
+                                <option value="lundi">Lundi</option>
+                                <option value="mardi">Mardi</option>
+                                <option value="mercredi">Mercredi</option>
+                                <option value="jeudi">Jeudi</option>
+                                <option value="vendredi">Vendredi</option>
+                                <option value="samedi">Samedi</option>
+                                <option value="dimanche">Dimanche</option>
+                            </select><br><br>
+                        <h4>Avez-vous déjà fait du jogging ?</h4>
+                        <!-- choix déjà pré-enregistrés -->
+                            <input list="choix" name="choix">
+                            <datalist id="choix">
+                                <option value="oui">
+                                <option value="non">
+                            </datalist><br><br>
+                        <input type="submit" value="Envoyer">
+                        <input type="Reset" value="Effacer">
+                </fieldset>
+            </form>
+        </body>
+    </html>
