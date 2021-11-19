@@ -52,10 +52,10 @@ li.list {
     display: block;
     text-align: left;
 }
-
 nav {
     /* webkit permet d'adapter le sticky à safari */
     position: -webkit-sticky; 
+    /* pour faire un contenu déroulant (dropdown) il faut une position (relative, sticky, fixed,...) */
     position: sticky;
     top: 0;
     z-index: 2;
