@@ -86,11 +86,10 @@ h1 {
 }
 .boxintro1 {
     float: left;
-    width: 60%;
 }
 .boxintro2 {
     float: left;
-    width: 40%;
+    width: calc(100% - 700px);
     padding: 10px;
 }
 .floatintro::after {
@@ -109,7 +108,7 @@ h2 {
 }
 h3 {
     font-size: 1.3em;
-    margin-top: 20px;
+    margin-top: 5px;
 }
 table {
     clear: both;
@@ -138,6 +137,7 @@ footer {
     font-size: max(3vmin, 1.7em);
     padding: 5% 0;
     font-family: 'outfit', Verdana;
+    margin-top: 5px;
 }
 
 /* inscription */
@@ -153,12 +153,13 @@ input[type=text], input[type=password], input[type=date] {
     padding: 5px;
 } 
 input[type=email] {
-    background-color: white;
     background-image: url(Images/mailicon.png);
     background-position: 5px 2px;
     background-repeat: no-repeat;
     background-size: auto 90%;
-    padding: 5px 20px 5px 35px;
+    padding: 5px 5px 5px 35px;
+    border-radius: 2px;
+    border: solid 0.8px gray;
 }
 textarea {
     width: calc(100% - 200px);
@@ -180,7 +181,7 @@ h4::before {
     border-radius: 10px / 5px;
 }
 input[type=submit]:hover, input[type=reset]:hover {
-    box-shadow: 2px 2px 5px black
+    box-shadow: 0 0 3px black
 }
 
 /* media querries */
@@ -188,10 +189,13 @@ input[type=submit]:hover, input[type=reset]:hover {
     #imgtest {
         display: none;
     }
-    .boxintro1, .boxintro2 {
+    textarea {
         width: 100%;
     }
-    textarea {
+    video {
+        display: none;
+    }
+    .boxintro2 {
         width: 100%;
     }
 }
