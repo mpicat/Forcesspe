@@ -28,9 +28,8 @@ li {
 }
 li a, .listbtn {
     /* inline-block permet de donner une taille à l'élément tout en restant "inline"  */
-    display: inline-block;
+    display: block;
     color: white;
-    text-align: center;
     padding: 16px 12px;
     text-decoration: none;
     font-weight: bold;
@@ -40,7 +39,7 @@ li a:hover, .list:hover .listbtn {
     color: black;
 }
 li.list {
-    display: inline-block;
+    display: block;
 }
 .list-content {
     display: none;
@@ -54,7 +53,7 @@ li.list {
 }
 .list-content a {
     display: block;
-    text-align: left;
+    text-align: center;
 }
 nav {
     /* webkit permet d'adapter le sticky à safari */
@@ -79,11 +78,11 @@ nav {
     position: absolute;
     top: 60%;
     left: 20px;
-    font-size: 2vw;
+    font-size: max(3vmin, 1.2em);
 }
 h1 {
     text-transform: uppercase;
-    font-size: 2.5vw;
+    font-size: max(3.5vmin, 1.7em);
 }
 .boxintro1 {
     float: left;
@@ -136,14 +135,16 @@ tr:nth-child(odd) {
 footer {
     background-color: black;
     text-align: center;
-    font-size: 3vw;
+    font-size: max(3vmin, 1.7em);
     padding: 5% 0;
     font-family: 'outfit', Verdana;
 }
 
 /* inscription */
 form {
-    background-color: #a9b8b2;
+    /* si le browser ne supporte pas  gradient */
+    background-color: rgb(221, 217, 217); 
+    background-image: linear-gradient(90deg, white, rgba(10,10,10,0.6));
     margin: 15px 0;
     padding: 10px;
     border-radius: 10px;
@@ -168,12 +169,18 @@ textarea {
 form {
     counter-reset: part;
 }
+h4 {
+    line-height: 25px;
+}
 h4::before {
     counter-increment: part;
     content: counter(part);
     background-color: #04a96d;
     padding: 5px 10px;
     border-radius: 10px / 5px;
+}
+input[type=submit]:hover, input[type=reset]:hover {
+    box-shadow: 2px 2px 5px black
 }
 
 /* media querries */
@@ -183,15 +190,6 @@ h4::before {
     }
     .boxintro1, .boxintro2 {
         width: 100%;
-    }
-    .intro {
-        font-size: 1.2em;
-    }
-    h1 {
-        font-size: 1.7em;
-    }
-    footer p {
-        font-size: 1.7em;
     }
     textarea {
         width: 100%;
@@ -205,5 +203,11 @@ h4::before {
 @media screen and (max-width: 480px) {
     li, .liins {
         float: none;
+    }
+    li a, .listbtn {
+        padding: 6px 12px;
+    }
+    ul {
+        text-align: center;
     }
 }
