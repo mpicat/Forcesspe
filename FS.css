@@ -335,4 +335,7 @@ input[type=submit]:hover, input[type=reset]:hover {
     ul {
         text-align: center;
     }
+    .list:hover .list-content {
+        display: none;
+    }
 }
