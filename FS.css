@@ -65,14 +65,26 @@ nav {
 }
 
 /* page accueil */
+.container {
+    position : relative;
+    width: 100%;
+}
 .imgintro {
     background-image: url(Images/296699.jpg);
     height: 730px;
     margin-bottom: 5px;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-    filter: opacity(0.4);
+    display: block;
+}
+.ov {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(rgba(231, 37, 37, 0.4), white);
+    width: 100%;
+    height: 100%;
 }
 .intro {
     position: absolute;
@@ -96,6 +108,9 @@ h1 {
     content: "";
     clear: both;
     display: table;
+}
+video {
+    border-radius: 7px;
 }
 
 /* page tests */
@@ -221,7 +236,7 @@ input[type=submit]:hover, input[type=reset]:hover {
 }
 
 /* page entrainements : hover overlay */
-.container {
+.contain {
     position : relative;
     width: 60%;
     margin-top: 30px;
@@ -245,7 +260,7 @@ input[type=submit]:hover, input[type=reset]:hover {
     height: 0;
     transition: .5s ease;
 }
-.container:hover .overlay {
+.contain:hover .overlay {
     height: 100%;
 }
 .text {
@@ -259,7 +274,7 @@ input[type=submit]:hover, input[type=reset]:hover {
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 }
-.container h2 {
+.contain h2 {
     position: absolute;
     top: 30%;
     writing-mode: vertical-rl;
@@ -294,11 +309,11 @@ input[type=submit]:hover, input[type=reset]:hover {
         margin-left: -5px;
         border-color: transparent transparent black transparent;
     }
-    .container {
+    .contain {
         width: 100%;
         margin: 20px auto;
     }
-    .container h2 {
+    .contain h2 {
         font-size: 4vmax;
     }
 }
