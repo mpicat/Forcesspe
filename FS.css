@@ -28,8 +28,9 @@ li {
 }
 li a, .listbtn {
     /* inline-block permet de donner une taille à l'élément tout en restant "inline"  */
-    display: block;
+    display: inline-block;
     color: white;
+    text-align: center;
     padding: 16px 12px;
     text-decoration: none;
     font-weight: bold;
@@ -39,7 +40,7 @@ li a:hover, .list:hover .listbtn {
     color: black;
 }
 li.list {
-    display: block;
+    display: inline-block;
 }
 .list-content {
     display: none;
