@@ -10,6 +10,10 @@ body {
     color: white;
     background-color: black;
 }
+/* global variable */
+:root {
+    --green: #04a96d;
+}
 
 /* nav */
 ul {
@@ -24,7 +28,7 @@ li {
 }
 .liins {
     float: right;
-    background-color: #04a96d;
+    background-color: var(--green);
 }
 li a, .listbtn {
     /* inline-block permet de donner une taille à l'élément tout en restant "inline"  */
@@ -36,7 +40,7 @@ li a, .listbtn {
     font-weight: bold;
 }
 li a:hover, .list:hover .listbtn {
-    background-color: #04a96d;
+    background-color: var(--green);
     color: black;
 }
 li.list {
@@ -145,7 +149,7 @@ table, th, td {
     border-collapse: collapse;
 }
 th {
-    background-color: #04a96d;
+    background-color: var(--green);
 }
 th, td {
     padding: 10px;
@@ -191,8 +195,8 @@ th, td {
 footer {
     background-color: black;
     text-align: center;
-    font-size: max(3vmin, 1.7em);
-    padding: 5% 0;
+    font-size: max(4vmin, 1.5em);
+    padding: 3% 0;
     font-family: 'outfit', Verdana;
     margin-top: 5px;
 }
@@ -233,19 +237,23 @@ h4 {
 h4::before {
     counter-increment: part;
     content: counter(part);
-    background-color: #04a96d;
+    background-color: var(--green);
     padding: 5px 10px;
     border-radius: 10px / 5px;
 }
 input[type=submit]:hover, input[type=reset]:hover {
-    box-shadow: 0 0 3px black
+    box-shadow: 0 0 3px black;
 }
-
-/* page entrainements : hover overlay */
+/* page entrainements : hover overlay + flex */
+.flexcont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 .contain {
     position : relative;
-    width: 60%;
-    margin-top: 30px;
+    flex: 45%;
+    margin: 20px 15px;
 }
 .picday {
     display: block;
@@ -259,7 +267,7 @@ input[type=submit]:hover, input[type=reset]:hover {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #04a96d;
+    background-color: var(--green);
     border-radius: 5px;
     overflow: hidden;
     width: 100%;
@@ -312,13 +320,15 @@ input[type=submit]:hover, input[type=reset]:hover {
         margin-left: -5px;
         border-color: transparent transparent black transparent;
     }
-    .contain {
-        width: 100%;
-        margin: 20px auto;
+    .flexcont {
+        flex-direction: column;
     }
     .contain h2 {
         font-size: 4vmax;
     }
+    .center {
+        text-align: center;
+        }
 }
 @media screen and (min-width: 1000px) {
     #imgtest2 {
@@ -337,5 +347,13 @@ input[type=submit]:hover, input[type=reset]:hover {
     }
     .list-content {
         min-width: 100%;
+    }
+    h3 {
+        font-size: 1.2em;
+    }
+    
+    h2 {
+        display: inline;
+        font-size: 1.5em;
     }
 }
