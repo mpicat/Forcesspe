@@ -200,6 +200,63 @@ footer {
     font-family: 'outfit', Verdana;
     margin-top: 5px;
 }
+/* footer keyframe */
+@keyframes part1 {
+    0% {opacity: 0;}
+    5% {opacity: 0,25;}
+    10% {opacity: 0,5;}
+    15% {opacity: 0,75;}
+    20% {opacity: 1;}
+    70% {opacity: 1;}
+    77.5% {opacity: 0,75;}
+    85% {opacity: 0,5;}
+    92.5% {opacity: 0,25;}
+    100% {opacity: 0;}
+}
+.span1 {
+    opacity: 0;
+    animation-name: part1;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+@keyframes part2 {
+    0% {opacity: 0;}
+    25% {opacity: 0;}
+    30% {opacity: 0,25;}
+    35% {opacity: 0,5;}
+    40% {opacity: 0,75;}
+    45% {opacity: 1;}
+    70% {opacity: 1;}
+    77.5% {opacity: 0,75;}
+    85% {opacity: 0,5;}
+    92.5% {opacity: 0,25;}
+    100% {opacity: 0;}
+
+}
+.span2 {
+    opacity: 0;
+    animation-name: part2;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+@keyframes part3 {
+    0% {opacity: 0;}
+    50% {opacity: 0;}
+    55% {opacity: 0,25;}
+    60% {opacity: 0,5;}
+    65% {opacity: 0,75;}
+    70% {opacity: 1;}
+    77.5% {opacity: 0,75;}
+    85% {opacity: 0,5;}
+    92.5% {opacity: 0,25;}
+    100% {opacity: 0;}
+}
+.span3 {
+    opacity: 0;
+    animation-name: part3;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
 
 /* inscription */
 form {
