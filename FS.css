@@ -3,6 +3,7 @@
     font-size: 100%;
     font-family: 'Lato', Verdana;
 }
+/* préférable de mettre margin 0 pour le body */
 body {
     margin: 0 8px 8px 8px;
 }
