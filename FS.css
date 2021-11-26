@@ -302,7 +302,7 @@ input[type=submit]:hover, input[type=reset]:hover {
 }
 /* page entrainements */
 .text h5 {
-    font-size: 4.2vmin;
+    font-size: 4vmin;
     color: white;
     display: inline;
 }
@@ -312,7 +312,7 @@ input[type=submit]:hover, input[type=reset]:hover {
     border: none;
 }
 .text p {
-    font-size: 2.7vmin;
+    font-size: 2.5vmin;
 }
 /* page entrainements : hover overlay + flex */
 .flexcont {
