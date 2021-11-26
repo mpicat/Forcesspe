@@ -301,6 +301,20 @@ h4::before {
 input[type=submit]:hover, input[type=reset]:hover {
     box-shadow: 0 0 3px black;
 }
+/* page entrainements */
+.text h5 {
+    font-size: 4.5vmin;
+    color: white;
+    display: inline;
+}
+.text hr {
+    background-color: black;
+    height: 2px;
+    border: none;
+}
+.text p {
+    font-size: 3vmin;
+}
 /* page entrainements : hover overlay + flex */
 .flexcont {
     display: flex;
@@ -335,16 +349,15 @@ input[type=submit]:hover, input[type=reset]:hover {
     height: 100%;
 }
 .text {
-    white-space: nowrap; 
     color: black;
     font-size: 1em;
     position: absolute;
-    overflow: hidden;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
+    top: 62%;
+    left: 81%;
+    transform: translate(-85%, -60%);
+    width: 90%;
 }
+/* page entrainements titre h2 vertical */
 .contain h2 {
     position: absolute;
     top: 30%;
@@ -353,6 +366,35 @@ input[type=submit]:hover, input[type=reset]:hover {
     color: white;
     text-shadow: 0 3px 6px black;
     font-size: 3vmax;
+}
+/* page entrainements2 : grid*/
+.gridcont {
+    display: grid;
+    grid-template-areas:
+    'j1 j2'
+    'j3 j4'
+    'j5 j6'
+    ;
+    /* espace entre row et espace entre col */
+    gap: 10px 7.5px;
+}
+.item1 {
+    grid-area: j1;
+}
+.item2 {
+    grid-area: j2;
+}
+.item3 {
+    grid-area: j3;
+}
+.item4 {
+    grid-area: j4;
+}
+.item5 {
+    grid-area: j5;
+}
+.item6 {
+    grid-area: j6;
 }
 
 /* media querries */
@@ -372,8 +414,8 @@ input[type=submit]:hover, input[type=reset]:hover {
         margin-left: -100px;
     }
     #tooltiptext::after {
-        bottom: 100%;
-        left: 70%;
+        top: -8%;
+        left: 50%;
         margin-left: -5px;
         border-color: transparent transparent black transparent;
     }
@@ -385,7 +427,12 @@ input[type=submit]:hover, input[type=reset]:hover {
     }
     .center {
         text-align: center;
-        }
+    }
+    .gridcont {
+        grid-template-areas:
+        'j1' 'j2' 'j3' 'j4' 'j5' 'j6'
+        ;
+    }
 }
 @media screen and (min-width: 1000px) {
     #imgtest2 {
@@ -411,6 +458,6 @@ input[type=submit]:hover, input[type=reset]:hover {
     
     h2 {
         display: inline;
-        font-size: 1.5em;
+        font-size: 1.4em;
     }
 }
