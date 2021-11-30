@@ -3,9 +3,9 @@
     font-size: 100%;
     font-family: 'Lato', Verdana;
 }
-/* préférable de mettre margin 0 pour le body */
+
 body {
-    margin: 0 8px 8px 8px;
+    margin: 0;
 }
 ::selection {
     color: white;
@@ -88,6 +88,7 @@ h1 {
 .boxintro1 {
     float: left;
     width: 50%;
+    padding: 10px;
 }
 .boxintro2 {
     float: left;
@@ -100,7 +101,7 @@ h1 {
     display: table;
 }
 video {
-    border-radius: 7px;
+    border-radius: 5px;
     width: 100%;
     height: auto;
     /* préciser object-fit pour recadrer la vidéo dans son espace */
@@ -108,7 +109,7 @@ video {
 }
 /* page accueil : dégradé fondu */
 .imgintro {
-    background-image: url(Images/296699.jpg);
+    background-image: url(Images//Images_reduites/296699x.webp);
     height: 730px;
     margin-bottom: 5px;
     background-position: center;
@@ -126,7 +127,7 @@ video {
 }
 /* page tests */
 main {
-    margin-top: 10px;
+    margin: 10px;
 }
 h2 {
     display: inline;
@@ -134,7 +135,7 @@ h2 {
 }
 h3 {
     font-size: 1.3em;
-    margin-top: 30px;
+    margin: 30px 10px 0 10px;
 }
 main::after {
     clear: both;
@@ -143,6 +144,7 @@ main::after {
 }
 table {
     width: 100%;
+    margin: 10px;
 }
 table, th, td {
     border: solid 1px black;
@@ -198,7 +200,6 @@ footer {
     font-size: max(4vmin, 1.5em);
     padding: 3% 0;
     font-family: 'outfit', Verdana;
-    margin-top: 5px;
 }
 /* footer keyframe */
 @keyframes part1 {
@@ -263,7 +264,7 @@ form {
     /* si le browser ne supporte pas le gradient */
     background-color: rgb(221, 217, 217); 
     background-image: linear-gradient(90deg, white, rgba(10,10,10,0.6));
-    margin: 15px 0;
+    margin: 10px;
     padding: 10px;
     border-radius: 10px;
 }
